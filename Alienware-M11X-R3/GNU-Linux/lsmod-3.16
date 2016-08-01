@@ -1,0 +1,162 @@
+Module                  Size  Used by
+isofs                  38965  0 
+sr_mod                 21903  0 
+cdrom                  47424  1 sr_mod
+ufs                    73443  0 
+qnx4                   13036  0 
+hfsplus               101391  0 
+hfs                    53845  0 
+minix                  31387  0 
+ntfs                  194605  0 
+msdos                  17046  0 
+jfs                   172859  0 
+xfs                   779930  0 
+libcrc32c              12426  1 xfs
+crc32c_generic         12656  0 
+mcs7780                16916  0 
+irda                  101214  1 mcs7780
+crc_ccitt              12347  2 irda,mcs7780
+mmc_block              35031  0 
+usblp                  17274  0 
+ipheth                 12945  0 
+nls_utf8               12456  0 
+nls_cp437              16553  0 
+vfat                   17135  0                                                                                                                                                                 
+fat                    61986  2 vfat,msdos                                                                                                                                                      
+usb_storage            56215  0                                                                                                                                                                 
+ctr                    12927  0                                                                                                                                                                 
+ccm                    17577  0                                                                                                                                                                 
+bnep                   17431  2                                                                                                                                                                 
+bbswitch               12878  0                                                                                                                                                                 
+nfsd                  263032  2                                                                                                                                                                 
+auth_rpcgss            51211  1 nfsd                                                                                                                                                            
+oid_registry           12419  1 auth_rpcgss
+nfs_acl                12511  1 nfsd
+nfs                   188136  0 
+lockd                  83389  2 nfs,nfsd
+fscache                45542  1 nfs
+sunrpc                237402  6 nfs,nfsd,auth_rpcgss,lockd,nfs_acl
+sha256_ssse3           25692  2 
+sha256_generic         16804  1 sha256_ssse3
+twofish_generic        16569  0 
+twofish_avx_x86_64     46079  2 
+twofish_x86_64_3way    25483  1 twofish_avx_x86_64
+xts                    12679  1 twofish_x86_64_3way
+twofish_x86_64         12541  3 twofish_avx_x86_64,twofish_x86_64_3way
+twofish_common         20585  4 twofish_generic,twofish_avx_x86_64,twofish_x86_64_3way,twofish_x86_64
+cbc                    12696  0 
+algif_skcipher         17349  0 
+af_alg                 13034  1 algif_skcipher
+joydev                 17063  0 
+hid_generic            12393  0 
+usbhid                 44460  0 
+hid                   102264  2 hid_generic,usbhid
+ath3k                  16781  0 
+uvcvideo               79005  0 
+videobuf2_vmalloc      12816  1 uvcvideo
+videobuf2_memops       12519  1 videobuf2_vmalloc
+videobuf2_core         47787  1 uvcvideo
+v4l2_common            12995  1 videobuf2_core
+videodev              126451  3 uvcvideo,v4l2_common,videobuf2_core
+media                  18305  2 uvcvideo,videodev
+snd_hda_codec_hdmi     45118  1 
+snd_hda_codec_realtek    67168  1 
+snd_hda_codec_generic    63181  1 snd_hda_codec_realtek
+ecb                    12737  1 
+btusb                  29721  0 
+bluetooth             374429  22 bnep,ath3k,btusb
+6lowpan_iphc           16588  1 bluetooth
+ext4                  473801  1 
+crc16                  12343  2 ext4,bluetooth
+mbcache                17171  1 ext4
+jbd2                   82514  1 ext4
+dell_wmi               12477  0 
+sparse_keymap          12818  1 dell_wmi
+iTCO_wdt               12831  0 
+iTCO_vendor_support    12649  1 iTCO_wdt
+arc4                   12536  2 
+x86_pkg_temp_thermal    12951  0 
+intel_powerclamp       17159  0 
+intel_rapl             17356  0 
+coretemp               12820  0 
+kvm_intel             139116  0 
+kvm                   388784  1 kvm_intel
+ath9k                  90245  0 
+crc32_pclmul           12915  0 
+ath9k_common           21746  1 ath9k
+ath9k_hw              391172  2 ath9k_common,ath9k
+snd_hda_intel          26407  3 
+ath                    26067  3 ath9k_common,ath9k,ath9k_hw
+snd_hda_controller     26646  1 snd_hda_intel
+pcspkr                 12595  0 
+psmouse                99249  0 
+snd_hda_codec         104500  5 snd_hda_codec_realtek,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_intel,snd_hda_controller
+evdev                  17445  21 
+serio_raw              12849  0 
+i2c_i801               16965  0 
+mac80211              474216  1 ath9k
+sg                     29973  0 
+snd_hwdep              13148  1 snd_hda_codec
+cfg80211              405538  4 ath,ath9k_common,ath9k,mac80211
+sdhci_pci              22097  0 
+jmb38x_ms              17096  0 
+rfkill                 18867  3 cfg80211,bluetooth
+snd_pcm                88662  4 snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel,snd_hda_controller
+sdhci                  35161  1 sdhci_pci
+xhci_hcd              152977  0 
+memstick               13696  1 jmb38x_ms
+mmc_core              102374  3 mmc_block,sdhci,sdhci_pci
+atl1c                  44802  0 
+snd_timer              26614  1 snd_pcm
+snd                    65244  14 snd_hda_codec_realtek,snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_hda_codec_generic,snd_hda_codec,snd_hda_intel
+soundcore              13026  2 snd,snd_hda_codec
+wmi                    17339  1 dell_wmi
+i915                  837235  2 
+ehci_pci               12512  0 
+ehci_hcd               69837  1 ehci_pci
+battery                13356  0 
+drm_kms_helper         49210  1 i915
+ac                     12715  0 
+drm                   249998  4 i915,drm_kms_helper
+dell_smo8800           12742  0 
+usbcore               195468  11 ath3k,btusb,usblp,uvcvideo,mcs7780,usb_storage,ehci_hcd,ehci_pci,ipheth,usbhid,xhci_hcd
+video                  18096  1 i915
+i2c_algo_bit           12751  1 i915
+i2c_core               46012  7 drm,i915,i2c_i801,drm_kms_helper,i2c_algo_bit,v4l2_common,videodev
+lpc_ich                20768  0 
+mei_me                 17941  0 
+usb_common             12440  1 usbcore
+mfd_core               12601  1 lpc_ich
+button                 12944  1 i915
+mei                    74977  1 mei_me
+processor              28221  0 
+thermal_sys            27642  4 video,intel_powerclamp,processor,x86_pkg_temp_thermal
+shpchp                 31121  0 
+fuse                   83350  1 
+parport_pc             26300  0 
+ppdev                  16782  0 
+lp                     17074  0 
+parport                35749  3 lp,ppdev,parport_pc
+autofs4                35529  2 
+btrfs                 863629  2 
+xor                    21040  1 btrfs
+raid6_pq               95238  1 btrfs
+dm_crypt               22595  2 
+dm_mod                 89405  5 dm_crypt
+sd_mod                 44356  5 
+crc_t10dif             12431  1 sd_mod
+crct10dif_generic      12581  0 
+crct10dif_pclmul       13387  1 
+crct10dif_common       12356  3 crct10dif_pclmul,crct10dif_generic,crc_t10dif
+crc32c_intel           21809  2 
+aesni_intel           151423  3 
+aes_x86_64             16719  1 aesni_intel
+glue_helper            12695  3 aesni_intel,twofish_avx_x86_64,twofish_x86_64_3way
+lrw                    12757  3 aesni_intel,twofish_avx_x86_64,twofish_x86_64_3way
+gf128mul               12970  2 lrw,xts
+ablk_helper            12572  2 aesni_intel,twofish_avx_x86_64
+cryptd                 14516  4 aesni_intel,ablk_helper
+ahci                   33334  4 
+libahci                27158  1 ahci
+libata                177508  2 ahci,libahci
+scsi_mod              191405  5 sg,usb_storage,libata,sd_mod,sr_mod
