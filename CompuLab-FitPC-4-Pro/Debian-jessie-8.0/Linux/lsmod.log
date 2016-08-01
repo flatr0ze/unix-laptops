@@ -1,0 +1,107 @@
+Module                  Size  Used by
+nls_utf8               12456  1 
+nls_cp437              16553  1 
+vfat                   17135  1 
+fat                    61986  1 vfat
+snd_usb_audio         139503  2 
+snd_usbmidi_lib        27492  1 snd_usb_audio
+snd_rawmidi            26909  1 snd_usbmidi_lib
+snd_seq_device         13132  1 snd_rawmidi
+joydev                 17063  0 
+ecb                    12737  1 
+btusb                  29721  0 
+hid_roccat_isku        13963  0 
+hid_roccat             12697  1 hid_roccat_isku
+hid_roccat_common      12619  1 hid_roccat_isku
+bluetooth             374429  2 btusb
+6lowpan_iphc           16588  1 bluetooth
+crc16                  12343  1 bluetooth
+hid_generic            12393  0 
+usbhid                 44460  0 
+hid                   102264  3 hid_generic,hid_roccat_isku,usbhid
+nfsd                  267128  2 
+auth_rpcgss            51211  1 nfsd
+oid_registry           12419  1 auth_rpcgss
+nfs_acl                12511  1 nfsd
+nfs                   188136  0 
+lockd                  83389  2 nfs,nfsd
+fscache                45542  1 nfs
+sunrpc                237402  6 nfs,nfsd,auth_rpcgss,lockd,nfs_acl
+amd_freq_sensitivity    12452  0 
+kvm_amd                59128  0 
+kvm                   388784  1 kvm_amd
+crc32_pclmul           12915  0 
+evdev                  17445  27 
+snd_hda_codec_hdmi     45118  1 
+aesni_intel           151423  1 
+snd_hda_codec_realtek    67168  1 
+aes_x86_64             16719  1 aesni_intel
+lrw                    12757  1 aesni_intel                                               
+gf128mul               12970  1 lrw                                                       
+snd_hda_codec_generic    63181  1 snd_hda_codec_realtek                                   
+glue_helper            12695  1 aesni_intel                                               
+ablk_helper            12572  1 aesni_intel                                               
+cryptd                 14516  2 aesni_intel,ablk_helper                                   
+iwlwifi                96547  0                                                           
+snd_hda_intel          26407  5                                                           
+snd_hda_controller     26646  1 snd_hda_intel                                             
+fglrx               13303610  256                                                         
+edac_mce_amd           21166  0                                                           
+snd_hda_codec         104500  5 snd_hda_codec_realtek,snd_hda_codec_hdmi,snd_hda_codec_generic,snd_hda_intel,snd_hda_controller                                                     
+pcspkr                 12595  0                                                           
+snd_hwdep              13148  2 snd_usb_audio,snd_hda_codec                               
+fam15h_power           12684  0                                                           
+k10temp                12618  0                                                           
+snd_pcm                88662  5 snd_usb_audio,snd_hda_codec_hdmi,snd_hda_codec,snd_hda_intel,snd_hda_controller                                                                     
+edac_core              47321  0                                                           
+i2c_piix4              20864  0                                                           
+cfg80211              405538  1 iwlwifi                                                   
+snd_timer              26614  1 snd_pcm                                                   
+snd                    65244  26 snd_hda_codec_realtek,snd_usb_audio,snd_hwdep,snd_timer,snd_hda_codec_hdmi,snd_pcm,snd_rawmidi,snd_hda_codec_generic,snd_usbmidi_lib,snd_hda_codec,snd_hda_intel,snd_seq_device                                                              
+rfkill                 18867  2 cfg80211,bluetooth                                        
+soundcore              13026  2 snd,snd_hda_codec                                         
+tpm_tis                17231  0                                                           
+tpm                    31511  1 tpm_tis                                                   
+video                  18096  0                                                           
+acpi_cpufreq           17218  0                                                           
+processor              28221  5 acpi_cpufreq                                              
+button                 12944  1 fglrx                                                     
+shpchp                 31121  0                                                           
+thermal_sys            27642  2 video,processor                                           
+parport_pc             26300  0                                                           
+ppdev                  16782  0                                                           
+lp                     17074  0                                                           
+parport                35749  3 lp,ppdev,parport_pc                                       
+autofs4                35529  2                                                           
+usb_storage            56215  1                                                           
+btrfs                 863629  1                                                           
+xor                    21040  1 btrfs
+raid6_pq               95238  1 btrfs
+sg                     29973  0 
+sd_mod                 44356  5 
+crc_t10dif             12431  1 sd_mod
+crct10dif_generic      12581  0 
+mmc_block              35031  0 
+ohci_pci               12808  0 
+crct10dif_pclmul       13387  1 
+crct10dif_common       12356  3 crct10dif_pclmul,crct10dif_generic,crc_t10dif
+crc32c_intel           21809  1 
+ahci                   33334  2 
+libahci                27158  1 ahci
+sdhci_pci              22097  0 
+sdhci                  35161  1 sdhci_pci
+igb                   171921  0 
+mmc_core              102374  3 mmc_block,sdhci,sdhci_pci
+i2c_algo_bit           12751  1 igb
+xhci_hcd              152977  0 
+ehci_pci               12512  0 
+ohci_hcd               42982  1 ohci_pci
+ehci_hcd               69837  1 ehci_pci
+libata                177508  2 ahci,libahci
+i2c_core               46012  3 igb,i2c_piix4,i2c_algo_bit
+usbcore               195468  11 btusb,snd_usb_audio,usb_storage,ohci_hcd,ohci_pci,snd_usbmidi_lib,ehci_hcd,ehci_pci,hid_roccat_common,usbhid,xhci_hcd
+scsi_mod              191405  4 sg,usb_storage,libata,sd_mod
+dca                    13168  1 igb
+usb_common             12440  1 usbcore
+ptp                    17692  1 igb
+pps_core               17225  1 ptp
